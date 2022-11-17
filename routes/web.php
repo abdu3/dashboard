@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BrandController;
+use App\Http\Controllers\CategoryController;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
@@ -30,3 +32,29 @@ Route::middleware([
         return view('dashboard',compact('users'));
     })->name('dashboard');
 });
+
+Route::get('category/all',[CategoryController::class,'allCategories'])->name('all.category');
+Route::post('category/add',[CategoryController::class,'addCategory'])->name('store.category');
+
+Route::get('category/edit/{id}',[CategoryController::class,'edit']);
+Route::post('category/update{id}',[CategoryController::class,'update'])->name('update.category');
+
+Route::get('softDelete/category/{id}',[CategoryController::class,'softDelete']);
+
+Route::get('restore/category/{id}',[CategoryController::class,'restore']);
+Route::get('pDelete/category/{id}',[CategoryController::class,'pDelete']);
+
+/// multi image routes
+
+Route::get('multiImage/all',[BrandController::class,'allImages'])->name('all.image');
+Route::post('multiImage/add',[BrandController::class,'storeMultiImage'])->name('store.images');
+
+
+
+// Brand Routes
+Route::get('brand/all',[BrandController::class,'allBrand'])->name('all.brand');
+Route::post('brand/add',[BrandController::class,'store'])->name('store.brand');
+Route::get('/brand/edit/{id}',[BrandController::class,'edit']);
+Route::post('brand/update{id}',[BrandController::class,'update'])->name('update.brand');
+Route::get('/brand/delete/{id}',[BrandController::class,'delete']);
+
