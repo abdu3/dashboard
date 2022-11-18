@@ -17,3 +17,4 @@ yarn-error.log
 /.idea
 /.vscode
 /public/backend/assets/plugins
+/public/backend/assets/img
