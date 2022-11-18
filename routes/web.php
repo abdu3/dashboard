@@ -29,7 +29,7 @@ Route::middleware([
     Route::get('/dashboard', function () {
     //   $users= User::all();  // read data by Eloquent ORM
         $users=DB::table('users')->get();  // read data by query builder
-        return view('dashboard',compact('users'));
+        return view('Admin.index',compact('users'));
     })->name('dashboard');
 });
 
