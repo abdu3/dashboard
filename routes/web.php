@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
 use App\Models\User;
@@ -58,3 +59,6 @@ Route::get('/brand/edit/{id}',[BrandController::class,'edit']);
 Route::post('brand/update{id}',[BrandController::class,'update'])->name('update.brand');
 Route::get('/brand/delete/{id}',[BrandController::class,'delete']);
 
+//////// auth routes
+
+Route::get('user/logout',[AuthController::class,'logout'])->name('user.logout');
