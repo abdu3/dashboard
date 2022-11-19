@@ -1,6 +1,3 @@
-  <!-- ======= Hero Section ======= -->
-  <section id="hero">
-    <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
 
       <div class="carousel-inner" role="listbox">
 
