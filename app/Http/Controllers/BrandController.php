@@ -16,7 +16,7 @@ class BrandController extends Controller
 
     }
 
-    
+
     public function allBrand(){
 
         $brands=Brand::latest()->paginate(5);
@@ -133,7 +133,11 @@ class BrandController extends Controller
     $brands=Brand::find($id);
     $brand_image=$brands->brand_image;
 
-    unlink($brand_image);
+    try {
+        unlink($brand_image);
+    } catch (\Throwable $th) {
+        //throw $th;
+    }
 
     $brands->delete();
 
