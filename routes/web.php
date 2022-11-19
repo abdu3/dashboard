@@ -62,3 +62,6 @@ Route::get('/brand/delete/{id}',[BrandController::class,'delete']);
 //////// auth routes
 
 Route::get('user/logout',[AuthController::class,'logout'])->name('user.logout');
+
+
+include('admin.php');
