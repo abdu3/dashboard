@@ -26,7 +26,7 @@
                       <path class="logo-fill-white" fill="#FFF" d="M11 4v25l8 4V0z" />
                     </g>
                   </svg>
-                  <span class="brand-name">Sleek Dashboard</span>
+                  <span class="brand-name">ADQ Dashboard</span>
                 </a>
               </div>
               <!-- begin sidebar scrollbar -->
@@ -41,7 +41,7 @@
                       <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#dashboard"
                         aria-expanded="false" aria-controls="dashboard">
                         <i class="mdi mdi-view-dashboard-outline"></i>
-                        <span class="nav-text">Dashboard</span> <b class="caret"></b>
+                        <span class="nav-text">Home</span> <b class="caret"></b>
                       </a>
                       <ul  class="collapse show"  id="dashboard"
                         data-parent="#sidebar-menu">
@@ -51,21 +51,30 @@
 
                               <li  class="active" >
                                 <a class="sidenav-item-link" href="index.html">
-                                  <span class="nav-text">Ecommerce</span>
+                                  <span class="nav-text">Slider</span>
 
                                 </a>
                               </li>
 
 
-
-
-
-
                               <li >
                                 <a class="sidenav-item-link" href="analytics.html">
-                                  <span class="nav-text">Analytics</span>
+                                  <span class="nav-text">Home About</span>
 
                                   <span class="badge badge-success">new</span>
+
+                                </a>
+                              </li>
+                              <li >
+                                <a class="sidenav-item-link" href="">
+                                  <span class="nav-text">Home Profolio</span>
+
+
+                                </a>
+                              </li>
+                              <li >
+                                <a class="sidenav-item-link" href="{{route('all.brand')}}">
+                                  <span class="nav-text">Home Brand</span>
 
                                 </a>
                               </li>

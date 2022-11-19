@@ -1,16 +1,10 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-
-            Edit Brand <b></b>
-
-        </h2>
-    </x-slot>
-
-    <div class="py-12">
+@extends('Admin.master_app')
+@section('admin')
+    <div class="py-12  my-4" >
                 <div class="container">
+                    <a href="/brand/all" class="btn btn-primary mb-3 ">Back</a>
                     <div class="row">
-                        <div class="col-md-8">
+                        <div class="col-md-8 ">
                             <div class="card">
                                 @if (session()->has('success'))
                                 <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -48,16 +42,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="/brand/all" class="btn btn-primary mt-5 ">Back</a>
                 </div>
 
         </div>
-    {{-- </div> --}}
-</x-app-layout>
-{{-- <script>
-const  displayImage = function(event) {
-	var image = document.getElementById('output');
-	image.src = URL.createObjectURL(event.target.files[0]);
-    // console.log(image.src);
-};
-</script> --}}
+@endsection

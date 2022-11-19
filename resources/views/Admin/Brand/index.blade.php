@@ -1,13 +1,6 @@
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-
-            All Brand <b></b>
-
-        </h2>
-    </x-slot>
-
-    <div class="py-12">
+@extends('Admin.master_app')
+@section('admin')
+    <div class="py-12 my-4">
         {{-- <div class="max-w-7xl mx-auto sm:px-6 lg:px-8"> --}}
                 <div class="container">
                     <div class="row">
@@ -89,7 +82,8 @@
 
         </div>
     {{-- </div> --}}
-</x-app-layout>
+@endsection
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
 <script type="text/javascript">
 

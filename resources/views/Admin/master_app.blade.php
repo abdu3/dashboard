@@ -19,7 +19,8 @@
   <link href="  {{asset('backend/assets/plugins/ladda/ladda.min.css')}} " rel="stylesheet" />
   <link href="  {{asset('backend/assets/plugins/select2/css/select2.min.css')}} " rel="stylesheet" />
   <link href="  {{asset('backend/assets/plugins/daterangepicker/daterangepicker.css')}} " rel="stylesheet" />
-
+        {{--  bootstrap icon --}}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
   <!-- SLEEK CSS -->
   <link id="sleek-css" rel="stylesheet" href="  {{asset('backend/assets/css/sleek.css')}} " />
 
