@@ -16,6 +16,10 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+<<<<<<< HEAD
 /public/backend/assets/plugins
 /public/backend/assets/img
+=======
+/public/backend
+>>>>>>> front-end
 /public/frontend/assets/img
