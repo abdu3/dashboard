@@ -12,6 +12,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('slider/home',[SliderController::class,'homeSlider'])->name('slider.home') ;
 Route::get('slider/create',[SliderController::class,'createSlider'])->name('slider.create') ;
 Route::post('slider/store',[SliderController::class,'storeSlider'])->name('slider.store') ;
+Route::get('slider/edit/{id}',[SliderController::class,'editSlider'])->name('about.edit') ;
+Route::post('slider/update/{id}',[SliderController::class,'updateSlider'])->name('slider.update') ;
+Route::get('slider/delete/{id}',[SliderController::class,'deleteSlider'])->name('slider.delete') ;
 
 //  About routes
 Route::get('about/home',[AboutController::class,'homeAbout'])->name('about.home') ;
