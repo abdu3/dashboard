@@ -42,7 +42,7 @@ class SliderController extends Controller
     ]);
 
 
-    return redirect()->back()->with('success','Slider details inserted successfully.');
+    return redirect()->route('slider.home')->with('success','Slider details inserted successfully.');
 
 
    }

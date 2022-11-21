@@ -15,7 +15,7 @@
                         <h2>Add Slider</h2>
                     </div>
                     <div class="card-body">
-                        <form method="Post" action="{{route('slider.store')}}" enctype="multipart/form-data">
+                        <form method="Post" action="{{route('about.store')}}" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label for="title">Title</label>
@@ -25,16 +25,16 @@
                               @enderror
                             </div>
                             <div class="form-group">
-                                <label for="description">Description</label>
-                                <textarea class="form-control" id="description" rows="3" name="description" placeholder="Description"></textarea>
-                                @error("description")
+                                <label for="description">Short Description</label>
+                                <textarea class="form-control" id="description" rows="3" name="short_desc" placeholder="Short Description"></textarea>
+                                @error("short_desc")
                                 <span class="text-danger">{{$message}}</span>
                               @enderror
                             </div>
                             <div class="form-group">
-                                <label for="image">Image</label>
-                                <input type="file" class="form-control"  name="image" >
-                                @error("image")
+                                <label for="description">Long Description</label>
+                                <textarea class="form-control" id="description" rows="3" name="long_desc" placeholder="Long Description"></textarea>
+                                @error("long_desc")
                                 <span class="text-danger">{{$message}}</span>
                               @enderror
                             </div>
