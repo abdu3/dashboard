@@ -23,3 +23,11 @@ Route::post('about/store',[AboutController::class,'storeAbout'])->name('about.st
 Route::get('about/edit/{id}',[AboutController::class,'editAbout'])->name('about.edit') ;
 Route::post('about/update/{id}',[AboutController::class,'updateAbout'])->name('about.update') ;
 Route::get('about/delete/{id}',[AboutController::class,'deleteAbout'])->name('about.delete') ;
+
+
+// Brand Routes
+Route::get('brand/all',[BrandController::class,'allBrand'])->name('all.brand');
+Route::post('brand/add',[BrandController::class,'store'])->name('store.brand');
+Route::get('/brand/edit/{id}',[BrandController::class,'edit']);
+Route::post('brand/update{id}',[BrandController::class,'update'])->name('update.brand');
+Route::get('/brand/delete/{id}',[BrandController::class,'delete']);

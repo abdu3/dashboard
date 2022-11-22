@@ -66,7 +66,7 @@
                                 </a>
                               </li>
                               <li >
-                                <a class="sidenav-item-link" href="">
+                                <a class="sidenav-item-link" href="{{route('all.image')}}">
                                   <span class="nav-text">Home Profolio</span>
 
 

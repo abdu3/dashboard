@@ -9,6 +9,11 @@ use Image;
 
 class SliderController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+
+    }
    public function  homeSlider(){
     $sliders=Slider::latest()->paginate(5);
     return view('Admin.slider.index',compact('sliders'));

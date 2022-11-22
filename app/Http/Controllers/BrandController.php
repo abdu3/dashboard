@@ -171,7 +171,7 @@ if($request->hasFile('multi_images')){
 
     foreach($request->multi_images as $images){
         $img_gen=hexdec(uniqid()).'.'.$images->getClientOriginalExtension();
-        Image::make($images)->resize(300,200)->save('image/multi/'.$img_gen);
+        Image::make($images)->resize(579,861)->save('image/multi/'.$img_gen);
 
         $last_img='image/multi/'.$img_gen;
         MultiPic::insert([

@@ -20,7 +20,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
 
     $brands=DB::table('brands')->get();
-    return view('home',compact('brands'));
+    $about=DB::table('abouts')->first();
+    $images=DB::table('multi_pics')->get();
+    return view('home',compact('brands','about','images'));
 });
 
 Route::middleware([
@@ -48,17 +50,11 @@ Route::get('pDelete/category/{id}',[CategoryController::class,'pDelete']);
 
 /// multi image routes
 
-Route::get('multiImage/all',[BrandController::class,'allImages'])->name('all.image');
-Route::post('multiImage/add',[BrandController::class,'storeMultiImage'])->name('store.images');
+Route::get('profolio/all',[BrandController::class,'allImages'])->name('all.image');
+Route::post('profolio/add',[BrandController::class,'storeMultiImage'])->name('store.images');
 
 
 
-// Brand Routes
-Route::get('brand/all',[BrandController::class,'allBrand'])->name('all.brand');
-Route::post('brand/add',[BrandController::class,'store'])->name('store.brand');
-Route::get('/brand/edit/{id}',[BrandController::class,'edit']);
-Route::post('brand/update{id}',[BrandController::class,'update'])->name('update.brand');
-Route::get('/brand/delete/{id}',[BrandController::class,'delete']);
 
 //////// auth routes
 
