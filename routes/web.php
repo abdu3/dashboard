@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
@@ -50,8 +51,8 @@ Route::get('pDelete/category/{id}',[CategoryController::class,'pDelete']);
 
 /// multi image routes
 
-Route::get('profolio/all',[BrandController::class,'allImages'])->name('all.image');
-Route::post('profolio/add',[BrandController::class,'storeMultiImage'])->name('store.images');
+Route::get('portfolio/all',[BrandController::class,'allImages'])->name('all.image');
+Route::post('portfolio/add',[BrandController::class,'storeMultiImage'])->name('store.images');
 
 
 
@@ -59,6 +60,9 @@ Route::post('profolio/add',[BrandController::class,'storeMultiImage'])->name('st
 //////// auth routes
 
 Route::get('user/logout',[AuthController::class,'logout'])->name('user.logout');
+
+
+Route::get('portfolio/page',[AboutController::class,'portfolio'])->name('profolio.page');
 
 
 include('admin.php');

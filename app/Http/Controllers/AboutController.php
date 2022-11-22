@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\About;
+use App\Models\MultiPic;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -83,6 +84,10 @@ class AboutController extends Controller
 
  }
 
+    public function portfolio(){
+      $portfolios=  MultiPic::all();
 
+      return view('pages.profolio',['portfolios'=>$portfolios]);
+    }
 
 }
