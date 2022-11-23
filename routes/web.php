@@ -4,6 +4,8 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ContactFormController;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
@@ -54,6 +56,11 @@ Route::get('pDelete/category/{id}',[CategoryController::class,'pDelete']);
 Route::get('portfolio/all',[BrandController::class,'allImages'])->name('all.image');
 Route::post('portfolio/add',[BrandController::class,'storeMultiImage'])->name('store.images');
 
+
+/// contact page
+
+ Route::get('contact',[ContactController::class,'contact'])->name('contact');
+ Route::post('contact/form',[ContactFormController::class,'storeForm'])->name('contactForm');
 
 
 

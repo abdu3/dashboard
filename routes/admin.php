@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ContactFormController;
 use App\Http\Controllers\SliderController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,3 +33,16 @@ Route::post('brand/add',[BrandController::class,'store'])->name('store.brand');
 Route::get('/brand/edit/{id}',[BrandController::class,'edit']);
 Route::post('brand/update{id}',[BrandController::class,'update'])->name('update.brand');
 Route::get('/brand/delete/{id}',[BrandController::class,'delete']);
+
+// contact Route
+
+Route::get('contact/all',[ContactController::class,'HomeContact'])->name('contact.all');
+Route::get('contact/create',[ContactController::class,'createContact'])->name('contact.create');
+Route::post('contact/store',[ContactController::class,'storeContact'])->name('contact.store');
+Route::get('contact/edit/{id}',[ContactController::class,'editContact']);
+Route::post('contact/update{id}',[ContactController::class,'updateContact'])->name('contact.update');
+Route::get('contact/delete/{id}',[ContactController::class,'deleteContact']);
+
+// message route
+Route::get('contact/message',[ContactFormController::class,'message'])->name('message');
+Route::get('message/delete/{id}',[ContactFormController::class,'deleteMessage']);
