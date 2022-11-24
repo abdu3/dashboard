@@ -1,9 +1,11 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\BrandController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\ContactFormController;
 use App\Http\Controllers\SliderController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -46,3 +48,9 @@ Route::get('contact/delete/{id}',[ContactController::class,'deleteContact']);
 // message route
 Route::get('contact/message',[ContactFormController::class,'message'])->name('message');
 Route::get('message/delete/{id}',[ContactFormController::class,'deleteMessage']);
+
+
+// user route
+Route::get('user/changepassword',[UserController::class,'profile'])->name('profile');
+Route::post('user/updatepassword',[UserController::class,'UpdatePassword'])->name('update.password');
+Route::post('user/updateprofile',[UserController::class,'updateProfile'])->name('update.profile');
